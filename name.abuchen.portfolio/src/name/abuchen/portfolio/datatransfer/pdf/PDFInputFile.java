@@ -88,7 +88,7 @@ public class PDFInputFile extends Extractor.InputFile
             author = pdd.getAuthor() == null ? "" : pdd.getAuthor(); //$NON-NLS-1$
 
             PDFTextStripper textStripper = new PDFTextStripper();
-            textStripper.setSortByPosition(true);
+            textStripper.setSortByPosition(false);
             text = textStripper.getText(document);
 
             text = withoutHorizontalWhitespace(text);
